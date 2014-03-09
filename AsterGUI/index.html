@@ -1,10 +1,55 @@
 ﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html ng-app="asterGUIApp">
 <head>
-    <title>مدیریت استریسک
+    <title>
+        مدیریت استریسک
     </title>
+    <!--lib-->
+    <script src="Scripts/jquery-1.10.2.min.js"></script>
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/angular-route.js"></script>
+    <!--App-->
+    <script src="App.js"></script>
+    <script src="controllers/mainController.js"></script>
+    <script src="controllers/loginController.js"></script>
+    <script src="controllers/dashboardController.js"></script>
+    <link href="Content/bootstrap-rtl.css" rel="stylesheet" />
+    <link href="Content/style.css" rel="stylesheet" />
 </head>
-<body>
+<body id="dummybodyid" ng-controller="mainController">
+    <div class="navbar navbar-inverse" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">مدیریت استریسک</a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="#/dashboard"><a href="#">داشبورد</a></li>
+                    <li><a href="#/about">درباره ما</a></li>
+                    <li><a href="#/contact">ارتباط با ما</a></li>
+                 
+                </ul>
+                <ul class="nav navbar-nav">
+                    <li class="label-info">
+                        {{asteriskInfo.serverAddress}}
+                        {{asteriskInfo.amiUsername}}
+                        {{asteriskInfo.amiPassword}}
+                    </li>
+
+                </ul>
+            
+            </div>
+   
+        </div>
+
+    </div>
+    <div ng-view></div>
 
 </body>
 </html>

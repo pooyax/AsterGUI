@@ -1,0 +1,19 @@
+﻿<form role="form" class="login">
+    <div class="form-group">
+        <label>آدرس سرور</label>
+        <input  class="form-control" placeholder="آی پی یا آدرس سرور" ng-model="asteriskInfo.serverAddress">
+    </div>
+    <div class="form-group">
+        <label >نام کاربری</label>
+        <input class="form-control" placeholder="نام کاربری AMI" ng-model="asteriskInfo.amiUsername">
+    </div>
+    <div class="form-group">
+        <label >پسورد</label>
+        <input class="form-control" placeholder="پسورد AMI" ng-model="asteriskInfo.amiPassword">
+    </div>
+    <div class="form-group">
+        <label>پورت</label>
+        <input class="form-control" placeholder="پورت AMI" ng-model="asteriskInfo.port">
+    </div>
+    <button type="submit" class="btn btn-success" ng-click="login()">ورود</button>
+</form>
